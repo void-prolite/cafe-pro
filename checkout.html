@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freshify - Checkout</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-main: #0d0a1e;
+      --text: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      overflow: hidden;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 24px;
+      background: radial-gradient(ellipse at 50% 50%, #2E2951 0%, #0d0a1e 100%);
+    }
+
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      font-size: clamp(40px, 6vw, 80px);
+      line-height: 1.1;
+      margin-bottom: 24px;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      max-width: 800px;
+    }
+
+    .smiley {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      letter-spacing: normal;
+    }
+
+    p {
+      font-size: clamp(16px, 2vw, 20px);
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 600px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+    }
+
+    .contact-email {
+      color: #fff;
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-color: rgba(255, 255, 255, 0.3);
+      text-underline-offset: 4px;
+      transition: text-decoration-color 0.3s ease;
+      font-size: 24px;
+      display: inline-block;
+      margin-bottom: 60px;
+    }
+
+    .contact-email:hover {
+      text-decoration-color: #fff;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 16px 32px;
+      border-radius: 100px;
+      color: #fff;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+    }
+
+    .back-btn:hover {
+      background: #fff;
+      color: #000;
+      transform: translateY(-4px);
+    }
+    
+    .back-btn:active {
+      transform: scale(0.95);
+      transition-duration: 0.1s;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Decorative Background Shapes */
+    .shape {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      z-index: -1;
+      animation: float 12s ease-in-out infinite;
+    }
+    
+    .shape-1 {
+      width: 40vw;
+      height: 40vw;
+      max-width: 500px;
+      max-height: 500px;
+      background: rgba(112, 120, 166, 0.15);
+      top: -10%;
+      left: -10%;
+    }
+    
+    .shape-2 {
+      width: 45vw;
+      height: 45vw;
+      max-width: 600px;
+      max-height: 600px;
+      background: rgba(201, 64, 64, 0.08);
+      bottom: -15%;
+      right: -10%;
+      animation-delay: -6s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-40px) scale(1.05); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="shape shape-1"></div>
+  <div class="shape shape-2"></div>
+
+  <h1>Well that was an awesome experience wasn't it <span class="smiley">:)</span>?</h1>
+  <p>This can be yours! Contact us at:</p>
+  <a href="mailto:void.prolite@gmail.com" class="contact-email" style="animation-delay: 0.3s; opacity: 0; transform: translateY(30px); animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;">void.prolite@gmail.com</a>
+
+  <a href="index.html" class="back-btn">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+    Back to Home
+  </a>
+
+</body>
+</html>
