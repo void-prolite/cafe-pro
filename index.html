@@ -1187,6 +1187,17 @@
       opacity: 1;
       transform: scale(1);
     }
+    /* Mobile performance optimizations - remove blur in animations */
+    @media (max-width: 768px) {
+      *, .cart-overlay, #cart-sidebar, .toast, .quantity-controls, .pill-nav, .user-icon, .card-btn, nav.site-nav {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+      }
+      .shape {
+        filter: none !important;
+        opacity: 0.2;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1218,10 +1229,10 @@
       <div class="slide active">
         <div class="giant-title bebas title-anim anim">BLUEBERRY</div>
         <div class="bowl-wrapper">
-          <img src="Images/Blueberry-bowl.png" alt="Blueberry Bowl" class="bowl-img bowl-anim anim">
-          <img src="Images/Blueberry-1.png" alt="" class="ingredient ing-1 anim">
-          <img src="Images/Blueberry-2.png" alt="" class="ingredient ing-2 anim">
-          <img src="Images/Blueberry-3.png" alt="" class="ingredient ing-3 anim">
+          <img src="Images/Blueberry-bowl.webp" alt="Blueberry Bowl" class="bowl-img bowl-anim anim">
+          <img src="Images/Blueberry-1.webp" alt="" class="ingredient ing-1 anim">
+          <img src="Images/Blueberry-2.webp" alt="" class="ingredient ing-2 anim">
+          <img src="Images/Blueberry-3.webp" alt="" class="ingredient ing-3 anim">
         </div>
         <div class="slide-info content-anim anim">
           <div class="slide-name">Berry Pure</div>
@@ -1233,10 +1244,10 @@
       <div class="slide enter-right">
         <div class="giant-title bebas title-anim anim">STRAWBERRY</div>
         <div class="bowl-wrapper">
-          <img src="Images/Strawberry-bowl.png" alt="Strawberry Bowl" loading="lazy" class="bowl-img bowl-anim anim">
-          <img src="Images/Strawberry-1.png" alt="" loading="lazy" class="ingredient ing-1 anim">
-          <img src="Images/Strawberry-2.png" alt="" loading="lazy" class="ingredient ing-2 anim">
-          <img src="Images/Strawberry-3.png" alt="" loading="lazy" class="ingredient ing-3 anim">
+          <img src="Images/Strawberry-bowl.webp" alt="Strawberry Bowl" loading="lazy" class="bowl-img bowl-anim anim">
+          <img src="Images/Strawberry-1.webp" alt="" loading="lazy" class="ingredient ing-1 anim">
+          <img src="Images/Strawberry-2.webp" alt="" loading="lazy" class="ingredient ing-2 anim">
+          <img src="Images/Strawberry-3.webp" alt="" loading="lazy" class="ingredient ing-3 anim">
         </div>
         <div class="slide-info content-anim anim">
           <div class="slide-name">Pink Bliss</div>
@@ -1248,10 +1259,10 @@
       <div class="slide enter-right">
         <div class="giant-title bebas title-anim anim">CHOCOLATE</div>
         <div class="bowl-wrapper">
-          <img src="Images/Chocolate-bowl.png" alt="Chocolate Bowl" loading="lazy" class="bowl-img bowl-anim anim">
-          <img src="Images/Chocolate-1.png" alt="" loading="lazy" class="ingredient ing-1 anim">
-          <img src="Images/Chocolate-2.png" alt="" loading="lazy" class="ingredient ing-2 anim">
-          <img src="Images/Chocolate-3.png" alt="" loading="lazy" class="ingredient ing-3 anim">
+          <img src="Images/Chocolate-bowl.webp" alt="Chocolate Bowl" loading="lazy" class="bowl-img bowl-anim anim">
+          <img src="Images/Chocolate-1.webp" alt="" loading="lazy" class="ingredient ing-1 anim">
+          <img src="Images/Chocolate-2.webp" alt="" loading="lazy" class="ingredient ing-2 anim">
+          <img src="Images/Chocolate-3.webp" alt="" loading="lazy" class="ingredient ing-3 anim">
         </div>
         <div class="slide-info content-anim anim">
           <div class="slide-name">Cocoa Crush</div>
@@ -1263,10 +1274,10 @@
       <div class="slide enter-right">
         <div class="giant-title bebas title-anim anim">BLACKBERRY</div>
         <div class="bowl-wrapper">
-          <img src="Images/Blackberry-bowl.png" alt="Blackberry Bowl" loading="lazy" class="bowl-img bowl-anim anim">
-          <img src="Images/Blackberry-1.png" alt="" loading="lazy" class="ingredient ing-1 anim">
-          <img src="Images/Blackberry-2.png" alt="" loading="lazy" class="ingredient ing-2 anim">
-          <img src="Images/Blackberry-3.png" alt="" loading="lazy" class="ingredient ing-3 anim">
+          <img src="Images/Blackberry-bowl.webp" alt="Blackberry Bowl" loading="lazy" class="bowl-img bowl-anim anim">
+          <img src="Images/Blackberry-1.webp" alt="" loading="lazy" class="ingredient ing-1 anim">
+          <img src="Images/Blackberry-2.webp" alt="" loading="lazy" class="ingredient ing-2 anim">
+          <img src="Images/Blackberry-3.webp" alt="" loading="lazy" class="ingredient ing-3 anim">
         </div>
         <div class="slide-info content-anim anim">
           <div class="slide-name">Dark Berry</div>
@@ -1364,7 +1375,7 @@
           <div class="card-flavour bebas">BLUEBERRY</div>
         </div>
         <div class="card-centre">
-          <img src="Images/Blueberry-bowl.png" alt="Blueberry Bowl" loading="lazy" class="card-img">
+          <img src="Images/Blueberry-bowl.webp" alt="Blueberry Bowl" loading="lazy" class="card-img">
         </div>
         <div class="card-bottom">
           <div class="card-price">$14</div>
@@ -1382,7 +1393,7 @@
           <div class="card-flavour bebas">STRAWBERRY</div>
         </div>
         <div class="card-centre">
-          <img src="Images/Strawberry-bowl.png" alt="Strawberry Bowl" loading="lazy" class="card-img">
+          <img src="Images/Strawberry-bowl.webp" alt="Strawberry Bowl" loading="lazy" class="card-img">
         </div>
         <div class="card-bottom">
           <div class="card-price">$15</div>
@@ -1400,7 +1411,7 @@
           <div class="card-flavour bebas">CHOCOLATE</div>
         </div>
         <div class="card-centre">
-          <img src="Images/Chocolate-bowl.png" alt="Chocolate Bowl" loading="lazy" class="card-img">
+          <img src="Images/Chocolate-bowl.webp" alt="Chocolate Bowl" loading="lazy" class="card-img">
         </div>
         <div class="card-bottom">
           <div class="card-price">$13</div>
@@ -1418,7 +1429,7 @@
           <div class="card-flavour bebas">BLACKBERRY</div>
         </div>
         <div class="card-centre">
-          <img src="Images/Blackberry-bowl.png" alt="Blackberry Bowl" loading="lazy" class="card-img">
+          <img src="Images/Blackberry-bowl.webp" alt="Blackberry Bowl" loading="lazy" class="card-img">
         </div>
         <div class="card-bottom">
           <div class="card-price">$16</div>
@@ -1470,10 +1481,10 @@
   <script>
     // Cart System
     const PRODUCTS = [
-      {id: 0, name: 'Berry Pure', price: 14, img: 'Images/Blueberry-bowl.png'},
-      {id: 1, name: 'Pink Bliss', price: 15, img: 'Images/Strawberry-bowl.png'},
-      {id: 2, name: 'Cocoa Crush', price: 13, img: 'Images/Chocolate-bowl.png'},
-      {id: 3, name: 'Dark Berry', price: 16, img: 'Images/Blackberry-bowl.png'}
+      {id: 0, name: 'Berry Pure', price: 14, img: 'Images/Blueberry-bowl.webp'},
+      {id: 1, name: 'Pink Bliss', price: 15, img: 'Images/Strawberry-bowl.webp'},
+      {id: 2, name: 'Cocoa Crush', price: 13, img: 'Images/Chocolate-bowl.webp'},
+      {id: 3, name: 'Dark Berry', price: 16, img: 'Images/Blackberry-bowl.webp'}
     ];
     let cartItems = [];
     

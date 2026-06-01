@@ -154,6 +154,17 @@
       0%, 100% { transform: translateY(0) scale(1); }
       50% { transform: translateY(-40px) scale(1.05); }
     }
+    /* Mobile performance optimizations - remove blur in animations */
+    @media (max-width: 768px) {
+      *, .cart-overlay, #cart-sidebar, .toast, .quantity-controls, .pill-nav, .user-icon, .card-btn, nav.site-nav, .back-btn {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+      }
+      .shape {
+        filter: none !important;
+        opacity: 0.2;
+      }
+    }
   </style>
 </head>
 <body>
